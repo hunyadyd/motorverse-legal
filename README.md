@@ -10,6 +10,7 @@ Privacy Policy and Terms of Service for the MotorVerse app, in Hungarian and Eng
 | Terms of Service | [terms-hu.html](terms-hu.html) | [terms-en.html](terms-en.html) |
 
 `index.html` links all four with a HU/EN switch.
+Open questions for the lawyer: [LAWYER_REVIEW.md](LAWYER_REVIEW.md).
 
 Placeholders to fill in are in square brackets: search for `[`.
 Plain HTML plus `style.css`; `.nojekyll` makes Pages serve the files as they are.
