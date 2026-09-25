@@ -17,7 +17,7 @@ Search the pages for `[`. Besides the operator details (`[Company name Kft.]`, `
    - Car of the Month entries (a car photo and caption) and votes;
    - "my car is missing from the list" reports;
    - feature-idea votes.
-3. **DSA trader information (Art. 30).** Business accounts must provide name, address, phone number, email, trade register number and tax number, and self-certify that they only offer products that comply with EU law. The app collects all of these at registration and in Account settings (added alongside this list). The terms also say we *check* them; confirm what checking is required and the self-certification wording.
+3. **DSA trader information (Art. 30).** Business accounts must provide name, address, phone number, email, trade register number and tax number, and self-certify that they only offer products that comply with EU law. The app collects these fields at registration and in Account settings (added alongside this list), but has **no self-certification step yet**. The terms also say we *check* the details; confirm what checking is required, and the self-certification wording and where the app should ask for it.
 4. **Parental consent.** The terms require parental or guardian consent for buyers and sellers under 18, on top of the 16+ minimum age.
 5. **Retention periods.** The 2-year retention for support emails and for abuse reports is a suggestion.
 6. **Consumer dispute resolution.** The terms point consumers to the conciliation board (békéltető testület). The EU online dispute resolution platform shut down in July 2025, so it isn't mentioned.
