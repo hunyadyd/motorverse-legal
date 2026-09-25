@@ -1,0 +1,224 @@
+/* MotorVerse legal pages: the app's dark theme (see the app's constants/theme.ts). */
+:root {
+  --bg: #242424;
+  --card: #1a1a1a;
+  --border: #2a2a2a;
+  --text: #ffffff;
+  --text-secondary: #a0a0a0;
+  --primary: #0a84ff;
+  --accent: #ff6b00;
+  --draft-bg: rgba(255, 107, 0, 0.12);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+main {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 24px 16px 64px;
+}
+
+/* Wordmark: "Motor" in white, "Verse" in the accent, heavy and slightly italic like the app header. */
+.wordmark {
+  display: inline-block;
+  font-size: 32px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  text-decoration: none;
+  color: var(--text);
+}
+
+.wordmark span {
+  color: var(--accent);
+  font-style: italic;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.lang {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.draft {
+  border: 1px solid var(--accent);
+  background: var(--draft-bg);
+  color: var(--text);
+  border-radius: 14px;
+  padding: 12px 16px;
+  margin-bottom: 24px;
+  font-weight: 700;
+}
+
+.draft small {
+  display: block;
+  font-weight: 400;
+  color: var(--text-secondary);
+}
+
+h1 {
+  font-size: 28px;
+  line-height: 1.25;
+  margin: 0 0 4px;
+}
+
+.updated {
+  color: var(--text-secondary);
+  font-size: 14px;
+  margin: 0 0 24px;
+}
+
+h2 {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  margin: 32px 0 8px;
+}
+
+section {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 4px 20px;
+}
+
+h3 {
+  font-size: 17px;
+  margin: 16px 0 4px;
+}
+
+a {
+  color: var(--primary);
+}
+
+ul {
+  padding-left: 20px;
+}
+
+li {
+  margin: 4px 0;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+  margin: 12px 0;
+}
+
+th,
+td {
+  text-align: left;
+  vertical-align: top;
+  padding: 8px 8px 8px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+th {
+  color: var(--text-secondary);
+  font-weight: 600;
+}
+
+/* Tables scroll sideways on phones instead of widening the page. */
+.table-wrap {
+  overflow-x: auto;
+}
+
+.placeholder {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+footer {
+  margin-top: 40px;
+  color: var(--text-secondary);
+  font-size: 14px;
+}
+
+/* Index page */
+.switch {
+  display: inline-flex;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 3px;
+  gap: 3px;
+}
+
+.switch button {
+  border: 0;
+  border-radius: 9px;
+  padding: 8px 18px;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text-secondary);
+  background: transparent;
+  cursor: pointer;
+}
+
+.switch button[aria-pressed="true"] {
+  background: var(--accent);
+  color: #000000;
+}
+
+.cards {
+  display: grid;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.card {
+  display: block;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 16px 20px;
+  color: var(--text);
+  text-decoration: none;
+}
+
+.card:hover,
+.card:focus-visible {
+  border-color: var(--primary);
+}
+
+.card strong {
+  display: block;
+  font-size: 17px;
+}
+
+.card span {
+  color: var(--text-secondary);
+  font-size: 14px;
+}
+
+[hidden] {
+  display: none !important;
+}

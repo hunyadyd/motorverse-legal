@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="hu">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>MotorVerse – Jogi dokumentumok / Legal</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+  <header>
+    <a class="wordmark" href="./">Motor<span>Verse</span></a>
+    <div class="switch" role="group" aria-label="Nyelv / Language">
+      <button type="button" data-lang="hu" aria-pressed="true">HU</button>
+      <button type="button" data-lang="en" aria-pressed="false">EN</button>
+    </div>
+  </header>
+
+  <div class="draft" data-lang-block="hu">TERVEZET – jogi átnézésre vár<small>Ezek a dokumentumok még nem véglegesek és nem hatályosak.</small></div>
+  <div class="draft" data-lang-block="en" hidden>DRAFT – pending legal review<small>These documents are not final and not yet in effect.</small></div>
+
+  <div data-lang-block="hu">
+    <h1>Jogi dokumentumok</h1>
+    <p class="updated">A MotorVerse autóalkatrész-piactér alkalmazás dokumentumai.</p>
+    <div class="cards">
+      <a class="card" href="privacy-hu.html"><strong>Adatvédelmi tájékoztató</strong><span>Milyen adatokat kezelünk, miért, és milyen jogaid vannak.</span></a>
+      <a class="card" href="terms-hu.html"><strong>Általános Szerződési Feltételek (ÁSZF)</strong><span>A piactér használatának szabályai vevőknek és eladóknak.</span></a>
+    </div>
+  </div>
+
+  <div data-lang-block="en" hidden>
+    <h1>Legal documents</h1>
+    <p class="updated">Documents for the MotorVerse car parts marketplace app.</p>
+    <div class="cards">
+      <a class="card" href="privacy-en.html"><strong>Privacy Policy</strong><span>What data we process, why, and what your rights are.</span></a>
+      <a class="card" href="terms-en.html"><strong>Terms of Service</strong><span>The rules for using the marketplace, for buyers and sellers.</span></a>
+    </div>
+  </div>
+
+  <footer>
+    <span data-lang-block="hu">Kapcsolat: </span><span data-lang-block="en" hidden>Contact: </span><a href="mailto:motorverse@gmail.com">motorverse@gmail.com</a>
+  </footer>
+</main>
+<script>
+  // HU/EN switch: remembers the choice; the first visit follows the browser language.
+  (function () {
+    var buttons = document.querySelectorAll('.switch button');
+    function show(lang) {
+      document.documentElement.lang = lang;
+      document.querySelectorAll('[data-lang-block]').forEach(function (el) {
+        el.hidden = el.getAttribute('data-lang-block') !== lang;
+      });
+      buttons.forEach(function (b) {
+        b.setAttribute('aria-pressed', String(b.getAttribute('data-lang') === lang));
+      });
+      document.title = lang === 'hu' ? 'MotorVerse – Jogi dokumentumok' : 'MotorVerse – Legal documents';
+    }
+    var saved = null;
+    try { saved = localStorage.getItem('mv-legal-lang'); } catch (e) {}
+    var fromUrl = new URLSearchParams(location.search).get('lang');
+    var initial = fromUrl || saved || ((navigator.language || '').toLowerCase().indexOf('hu') === 0 ? 'hu' : 'en');
+    show(initial === 'en' ? 'en' : 'hu');
+    buttons.forEach(function (b) {
+      b.addEventListener('click', function () {
+        var lang = b.getAttribute('data-lang');
+        show(lang);
+        try { localStorage.setItem('mv-legal-lang', lang); } catch (e) {}
+      });
+    });
+  })();
+</script>
+</body>
+</html>
